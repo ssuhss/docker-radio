@@ -1,0 +1,12 @@
+version: '2'
+services:
+  radiophp:
+        image: library/ubuntu:14.04
+        container_name: radio14.041
+        volumes:
+          - ./musicas/:/var/www/html/radiophp/rest/mus/
+          - ./cache/:/var/www/html/radiophp/rest/cache/
+        ports:
+          - "8888:80"
+        restart: always
+        tty: true

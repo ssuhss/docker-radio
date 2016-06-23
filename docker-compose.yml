@@ -1,0 +1,12 @@
+version: '2'
+services:
+  radiophp:
+        image: ssuhss/teste-radio14.04:latest
+        container_name: radio
+        volumes:
+          - ./musicas/:/var/www/html/radio/rest/mus/
+          - ./cache/:/var/www/html/radio/rest/cache/
+        ports:
+          - "8888:80"
+        restart: always
+        tty: true
