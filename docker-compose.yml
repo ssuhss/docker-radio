@@ -1,12 +1,11 @@
 radio:
-  container_name: radioPHP
-  build: ./
+  container_name: radioMarabraz
+  build: ./php5.6-apache/
   ports:
    - "8888:80"
    - "443:443"
   volumes:
-   - ./musicas/:/var/www/html/radio/rest/mus/
-   - ./cache/:/var/www/html/radio/rest/cache/
+   - ./radio/:/var/www/html
   tty: true
 
 
